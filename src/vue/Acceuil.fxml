@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="232.0" style="-fx-background-color: #373737;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="94.0" prefWidth="232.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="27.0" text="Nom de la Bibliotheque" textAlignment="CENTER" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="4.0" layoutY="84.0" prefHeight="4.0" prefWidth="221.0" />
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="140.0" mnemonicParsing="false" onMouseClicked="#accueil" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="ACCUEIL" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_home2_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#livres" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Les Livres" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="190.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_books_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#location" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Location" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="240.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_books2_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#adherent" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Adherent" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="290.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_home2_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#impression" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Imression" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="350.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_home2_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="410.0" mnemonicParsing="false" onMouseClicked="#historique" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Historique" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="410.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_home2_32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="232.0" layoutY="-51.0" prefHeight="94.0" prefWidth="668.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="406.0" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="72.0" fitWidth="120.0" layoutX="534.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="399.0" layoutY="38.0" prefHeight="26.0" prefWidth="129.0" text="Nom d'utilisateur " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="root" layoutX="232.0" layoutY="94.0" prefHeight="406.0" prefWidth="668.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="410.0" prefWidth="678.0" styleClass="parent" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pane layoutX="20.0" layoutY="35.0" prefHeight="340.0" prefWidth="637.0" styleClass="pane" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="35.0">
+         <children>
+            <Label layoutX="404.0" layoutY="88.0" prefHeight="44.0" prefWidth="187.0" text="Etes vous inscris ?" textAlignment="CENTER" textFill="#eeeaea">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_seconnecter" layoutX="422.0" layoutY="184.0" mnemonicParsing="false" onAction="#OpenSignin" prefHeight="44.0" prefWidth="154.0" styleClass="btn-white-border" text="Se Connecter" textFill="#f8f8f8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="58.0" layoutY="88.0" prefHeight="44.0" prefWidth="202.0" text="Vous n'etes pas inscris ?" textAlignment="CENTER" textFill="#eeeaea">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_sinscrire" layoutX="82.0" layoutY="181.0" mnemonicParsing="false" onAction="#OpenSignup" prefHeight="50.0" prefWidth="154.0" styleClass="btn-white-border" stylesheets="@../sample/main.css" text="S'inscrire" textFill="#f8f8f8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <VBox fx:id="vbox" layoutX="22.0" layoutY="-23.0" prefHeight="386.0" prefWidth="281.0" styleClass="white-pane" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

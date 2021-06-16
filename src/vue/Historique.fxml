@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="668.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="14.0" layoutY="31.0" prefHeight="17.0" prefWidth="77.0" text="Rechercher">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField layoutX="102.0" layoutY="29.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField layoutX="105.0" layoutY="196.0" prefHeight="30.0" prefWidth="172.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField layoutX="105.0" layoutY="64.0" prefHeight="31.0" prefWidth="160.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
+        <TableView layoutX="327.0" layoutY="35.0" prefHeight="293.0" prefWidth="321.0" stylesheets="@../sample/main.css" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="20.0">
+            <columns>
+                <TableColumn prefWidth="61.0" text="Livre" />
+                <TableColumn minWidth="0.0" prefWidth="67.0" text="Adhrent" />
+                <TableColumn prefWidth="91.0" text="Date de bebut" />
+                <TableColumn prefWidth="101.0" text="Date de fin" />
+            </columns>
+        </TableView>
+        <TextField layoutX="105.0" layoutY="152.0" prefHeight="30.0" prefWidth="172.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField layoutX="105.0" layoutY="114.0" prefHeight="30.0" prefWidth="172.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+        <TextField layoutX="105.0" layoutY="251.0" prefHeight="30.0" prefWidth="172.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </TextField>
+      <Label layoutX="14.0" layoutY="158.0" text="Prenom" textFill="#1d6ea4" />
+      <Label layoutX="8.0" layoutY="120.0" text="Maison d'edition" textFill="#1d6ea4" />
+      <Label layoutX="9.0" layoutY="71.0" text="Auteur" textFill="#1d6ea4" />
+      <Label layoutX="15.0" layoutY="202.0" text="nCIN" textFill="#1d6ea4" />
+      <Label layoutX="15.0" layoutY="257.0" text="Telephone" textFill="#1d6ea4" />
+    </children>
+</AnchorPane>
