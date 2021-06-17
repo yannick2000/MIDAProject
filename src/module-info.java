@@ -6,4 +6,5 @@ module MIDAPROJECT {
     requires mysql.connector.java;
     opens sample;
     opens controller;
+    opens model;
 }

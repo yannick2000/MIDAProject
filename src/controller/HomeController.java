@@ -57,16 +57,16 @@ public class HomeController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        String sql4= "select nomLivre,nomEdition,nomType,nomAuteur,image from livre,auteur,maisonedition,type where auteur.idAuteur=livre.auteur and maisonedition.idEdition=Livre.maisonedition and type.idType = livre.type and idLivre not in(select livre from location) and idLivre < '"+position+"' ";
+        String sql4= "select nomLivre,maisonedition,nomType,auteur,image from livre,type where type.idType = livre.type and idLivre not in(select livre from location) and idLivre < '"+position+"' ";
         byte byteImg[];
         Blob blob;
         try {
             st= cnx.prepareStatement(sql4);
             result=st.executeQuery();
             if (result.next()){
-                txt_auteur.setText(result.getString("nomAuteur"));
+                txt_auteur.setText(result.getString("auteur"));
                 txt_nom.setText(result.getString("nomLivre"));
-                txt_maisonedition.setText(result.getString("nomEdition"));
+                txt_maisonedition.setText(result.getString("maisonedition"));
                 txt_type.setText(result.getString("nomType"));
                 blob= result.getBlob("image");
                 byteImg=blob.getBytes(1,(int) blob.length());
@@ -92,16 +92,16 @@ public class HomeController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        String sql4= "select nomLivre,nomEdition,nomType,nomAuteur,image from livre,auteur,maisonedition,type where auteur.idAuteur=livre.auteur and maisonedition.idEdition=Livre.maisonedition and type.idType = livre.type and idLivre not in(select livre from location) and idLivre > '"+position+"' ";
+        String sql4= "select nomLivre,maisonedition,nomType,auteur,image from livre,type where  type.idType = livre.type and idLivre not in(select livre from location) and idLivre > '"+position+"' ";
         byte byteImg[];
         Blob blob;
         try {
             st= cnx.prepareStatement(sql4);
             result=st.executeQuery();
             if (result.next()){
-                txt_auteur.setText(result.getString("nomAuteur"));
+                txt_auteur.setText(result.getString("auteur"));
                 txt_nom.setText(result.getString("nomLivre"));
-                txt_maisonedition.setText(result.getString("nomEdition"));
+                txt_maisonedition.setText(result.getString("maisonedition"));
                 txt_type.setText(result.getString("nomType"));
                 blob= result.getBlob("image");
                 byteImg=blob.getBytes(1,(int) blob.length());
@@ -125,16 +125,16 @@ public class HomeController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        String sql2= "select nomLivre,nomEdition,nomType,nomAuteur,image from livre,auteur,maisonedition,type where auteur.idAuteur=livre.auteur and maisonedition.idEdition=Livre.maisonedition and type.idType = livre.type and idLivre not in(select livre from location)";
+        String sql2= "select nomLivre,maisonedition,nomType,auteur,image from livre,type where  type.idType = livre.type and idLivre not in(select livre from location)";
         byte byteImg[];
         Blob blob;
         try {
             st = cnx.prepareStatement(sql2);
             result = st.executeQuery();
             if (result.next()){
-                txt_auteur.setText(result.getString("nomAuteur"));
+                txt_auteur.setText(result.getString("auteur"));
                 txt_nom.setText(result.getString("nomLivre"));
-                txt_maisonedition.setText(result.getString("nomEdition"));
+                txt_maisonedition.setText(result.getString("maisonedition"));
                 txt_type.setText(result.getString("nomType"));
                 blob= result.getBlob("image");
                 byteImg=blob.getBytes(1,(int) blob.length());
