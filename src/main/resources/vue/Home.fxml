@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="668.0" styleClass="backgrnd" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <ImageView fx:id="imagelog" fitHeight="298.0" fitWidth="343.0" layoutX="20.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="20.0" layoutY="22.0" prefHeight="50.0" prefWidth="628.0" style="-fx-background-color: #7294AC;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="22.0">
+         <children>
+            <Label layoutX="75.0" layoutY="17.0" text="Disponibilite">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="41.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_home2_32.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lab_nbr" layoutX="191.0" layoutY="19.0" prefHeight="21.0" prefWidth="40.0" textFill="WHITE" />
+            <Label layoutX="241.0" layoutY="16.0" text=")">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="14.0" text="(">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txt_nom" layoutX="439.0" layoutY="116.0" prefHeight="26.0" prefWidth="189.0" />
+      <TextField fx:id="txt_auteur" layoutX="443.0" layoutY="244.0" prefHeight="26.0" prefWidth="197.0" />
+      <TextField fx:id="txt_maisonedition" layoutX="442.0" layoutY="306.0" prefHeight="26.0" prefWidth="197.0" />
+      <Label layoutX="470.0" layoutY="87.0" prefHeight="21.0" prefWidth="51.0" text="Nom" textFill="#4e7a97">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="480.0" layoutY="215.0" prefHeight="21.0" prefWidth="51.0" text="Auteur" textFill="#4e7a97">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="475.0" layoutY="277.0" prefHeight="21.0" prefWidth="127.0" text="Maison d'edition" textFill="#4e7a97">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="preccedent" fitHeight="34.0" fitWidth="40.0" layoutX="453.0" layoutY="345.0" onMouseClicked="#showPreccedent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_double_left_32.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="suivant" fitHeight="34.0" fitWidth="34.0" layoutX="572.0" layoutY="345.0" onMouseClicked="#showSuivant" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icons8_double_right_32.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_type" layoutX="440.0" layoutY="174.0" prefHeight="26.0" prefWidth="197.0" />
+      <Label layoutX="480.0" layoutY="153.0" prefHeight="21.0" prefWidth="51.0" text="Type" textFill="#4e7a97">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
