@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="612.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
+<BorderPane prefHeight="681.0" prefWidth="1340.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilController">
    <center>
       <BorderPane>
          <top>
-            <Pane prefHeight="94.0" prefWidth="1058.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="83.0" prefWidth="1108.0" style="-fx-background-color: #243B55;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="72.0" fitWidth="120.0" layoutX="885.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
                   <Label layoutX="709.0" layoutY="34.0" prefHeight="26.0" prefWidth="129.0" text="Nom d'utilisateur " textFill="WHITE">
@@ -26,9 +26,9 @@
                </children>
             </Pane>
          </top>
-         <left>
-            <AnchorPane fx:id="root" prefHeight="516.0" prefWidth="1049.0" BorderPane.alignment="CENTER" />
-         </left>
+         <center>
+            <BorderPane fx:id="root" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
       </BorderPane>
    </center>
    <left>
@@ -37,7 +37,7 @@
             <VBox />
          </center>
          <top>
-            <Pane prefHeight="94.0" prefWidth="232.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="107.0" prefWidth="232.0" style="-fx-background-color: #093637;" BorderPane.alignment="CENTER">
                <children>
                   <Label layoutX="27.0" layoutY="27.0" text="Nom de la Bibliotheque" textAlignment="CENTER" textFill="#fffdfd">
                      <font>
@@ -49,62 +49,67 @@
             </Pane>
          </top>
          <left>
-            <AnchorPane prefHeight="614.0" prefWidth="232.0" style="-fx-background-color: #373737;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="614.0" prefWidth="232.0" style="-fx-background-color: #093637;" BorderPane.alignment="CENTER">
                <children>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="47.0" mnemonicParsing="false" onMouseClicked="#accueil" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="ACCUEIL" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="47.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_library_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#accueil" prefHeight="68.0" prefWidth="190.0" style="-fx-background-color: #203A43;" text="ACCUEIL" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#livres" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Les Livres" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="118.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_books_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#livres" prefHeight="69.0" prefWidth="189.0" style="-fx-background-color: #203A43;" text="Les Livres" textAlignment="CENTER" textFill="#f2eded" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="109.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="184.0" mnemonicParsing="false" onMouseClicked="#location" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Location" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="184.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_books2_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Button alignment="CENTER" layoutX="15.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#location" prefHeight="66.0" prefWidth="193.0" style="-fx-background-color: #203A43;" text="Location" textFill="#f2eded" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="201.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="259.0" mnemonicParsing="false" onMouseClicked="#adherent" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Adherent" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="259.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_home2_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Button alignment="CENTER" layoutX="18.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#adherent" prefHeight="64.0" prefWidth="196.0" style="-fx-background-color: #203A43;" text="Adherent" textFill="#f2eded" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="285.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="344.0" mnemonicParsing="false" onMouseClicked="#impression" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Imression" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="344.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_home2_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
+                  <Button alignment="CENTER" layoutX="18.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#impression" prefHeight="71.0" prefWidth="196.0" style="-fx-background-color: #203A43;" text="Impression" textFill="#f2eded" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="362.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font>
                   </Button>
-                  <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#historique" prefHeight="38.0" prefWidth="192.0" style="-fx-background-color: #373737;" text="Historique" textFill="#f2eded" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="419.0">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/icons8_home2_32.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <Button alignment="CENTER" layoutX="16.0" layoutY="452.0" mnemonicParsing="false" onMouseClicked="#historique" prefHeight="71.0" prefWidth="200.0" style="-fx-background-color: #203A43;" text="Historique" textFill="#fcfcfc" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="452.0">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="18.0" />
+                     </font></Button>
+                  <ImageView fitHeight="64.0" fitWidth="65.0" layoutX="19.0" layoutY="17.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/home_page_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="64.0" layoutX="15.0" layoutY="112.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/books_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="57.0" fitWidth="65.0" layoutX="14.0" layoutY="206.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="58.0" fitWidth="63.0" layoutX="22.0" layoutY="288.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="73.0" layoutX="15.0" layoutY="365.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/adobe_acrobat_reader_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="69.0" layoutX="19.0" layoutY="454.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/order_history_512px.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
          </left>

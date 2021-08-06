@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="850.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BDController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="tf-box" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tablebd" layoutX="470.0" layoutY="106.0" onMouseClicked="#tableevent" prefHeight="242.0" prefWidth="355.0">
+              <columns>
+                <TableColumn fx:id="cln_titre" prefWidth="179.0" text="Titre" />
+                <TableColumn fx:id="cln_dessinateur" prefWidth="174.0" text="Dessinateur" />
+              </columns>
+            </TableView>
+            <Label layoutX="32.0" layoutY="174.0" prefHeight="24.0" prefWidth="57.0" text="TITRE" />
+            <Label layoutX="25.0" layoutY="264.0" text="DESSINATEUR" />
+            <TextField fx:id="txt_titre" layoutX="184.0" layoutY="157.0" prefHeight="29.0" prefWidth="183.0" styleClass="tf-box" />
+            <TextField fx:id="txt_dessinateur" layoutX="180.0" layoutY="256.0" prefHeight="34.0" prefWidth="190.0" styleClass="tf-box" />
+            <Button fx:id="btn_ajouter" layoutX="61.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#ajouterbd" prefHeight="65.0" prefWidth="174.0" styleClass="buttons" text="AJOUTER" />
+            <Button fx:id="btn_modifier" layoutX="319.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#modifierbd" prefHeight="71.0" prefWidth="176.0" styleClass="buttons" text="MODIFIER" />
+            <Button fx:id="btn_supprimer" layoutX="580.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#supprimerbd" prefHeight="75.0" prefWidth="176.0" styleClass="buttons" text="SUPPRIMER" />
+            <Pane layoutY="14.0" prefHeight="76.0" prefWidth="756.0">
+               <children>
+                  <Label layoutX="213.0" layoutY="16.0" text="BD">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

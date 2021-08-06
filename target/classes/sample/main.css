@@ -30,8 +30,8 @@
 }
 .tf-box{
     -fx-background-color: transparent;
-    -fx-border-color: #DEDEE4;
-    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-color: #203A43;
+    -fx-border-width: 0px 0px 1px 0px;
 }
 .tf{
    -fx-background-color: transparent;
@@ -58,10 +58,10 @@
     -fx-background-color: transparent;
 }
 .table-view .table-cell{
-   -fx-text-fill: white;
+   -fx-text-fill: black;
 }
 .table-row-cell{
-   -fx-background-color: -fx-table-cell-border-color, #33698F;
+   -fx-background-color: -fx-table-cell-border-color,  #E9E4F0;
    -fx-background-insets: 0,0.0 0 1 0;
    -fx-padding: 0.0em;
 }
@@ -71,7 +71,7 @@
    -fx-padding: 0.0em;
 }
 .buttons{
-   -fx-background-color: #356b23;
+   -fx-background-color:   #203A43;
    -fx-background-radius: 5px;
    -fx-text-fill: #FFFFFF;
 }

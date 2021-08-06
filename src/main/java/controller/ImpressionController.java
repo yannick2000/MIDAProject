@@ -10,7 +10,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import java.awt.*;
 import java.io.*;
 import java.net.MalformedURLException;
@@ -122,15 +121,21 @@ public class ImpressionController implements Initializable {
         try {
             PdfWriter.getInstance(doc, new FileOutputStream("location.pdf"));
             doc.open();
-            String format ="dd/mm/yy hh:mm";
+            String format ="dd/MM/YY hh:mm";
 
             SimpleDateFormat formater=new SimpleDateFormat(format);
             java.util.Date date = new java.util.Date();
             com.itextpdf.text.Image img = com.itextpdf.text.Image.getInstance("C:\\Users\\Yanoblack\\Documents\\IdeaProjects\\MIDAPROJECT\\target\\classes\\images\\téléchargé.jpg");
             img.setAlignment(com.itextpdf.text.Image.ALIGN_CENTER);
             doc.add(img);
-            doc.add(new Paragraph("Entre : Adam MAURAULI "
-                    + "\nDemeurant a : Paris", FontFactory.getFont(FontFactory.TIMES_ROMAN,14, Font.NORMAL,BaseColor.BLACK)));
+            doc.add(new Paragraph("Facture a : "+txt_adherent.getText()+" "
+                    + "\nDemeurant a : : "+txt_addresse.getText()+""
+                    + "\nSon Telephone est :"+txt_telephone.getText()+""
+                    + "\nLe Livre emprunter est :"+txt_livre.getText()+" "
+                    + "\nD'auteur : "+txt_auteur.getText()+""
+                    + "\n Il a emprunter le livre du"+txt_datedebut.getText()+" au "+txt_datefin.getText()+" "
+                    + "\n Fait a Sanguera le "+formater.format(date)+""
+                    + "\nSignature", FontFactory.getFont(FontFactory.TIMES_ROMAN,14, Font.NORMAL,BaseColor.BLACK)));
             doc.close();
             Desktop.getDesktop().open(new File("location.pdf"));
         } catch (DocumentException e) {

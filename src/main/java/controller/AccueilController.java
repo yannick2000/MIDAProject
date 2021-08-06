@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,13 +16,14 @@ public class AccueilController implements Initializable {
 
     private Parent fxml;
     @FXML
-    private AnchorPane root;
+    private BorderPane root;
+
     @FXML
     void accueil(MouseEvent event) {
         try{
             fxml=FXMLLoader.load(getClass().getResource("/vue/Home.fxml"));
-            root.getChildren().removeAll();
-            root.getChildren().setAll(fxml);
+            root.setCenter(null);
+            root.setCenter(fxml);
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -59,7 +61,7 @@ public class AccueilController implements Initializable {
     @FXML
     void livres(MouseEvent event) {
         try{
-            fxml=FXMLLoader.load(getClass().getResource("/vue/Livres.fxml"));
+            fxml=FXMLLoader.load(getClass().getResource("/vue/Document.fxml"));
             root.getChildren().removeAll();
             root.getChildren().setAll(fxml);
 

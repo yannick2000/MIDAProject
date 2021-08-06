@@ -253,7 +253,6 @@ public class AdherentController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        cln_id.setCellValueFactory(new PropertyValueFactory<Adherent,Integer>("id"));
         cln_nom.setCellValueFactory(new PropertyValueFactory<Adherent,String>("nom"));
         cln_prenom.setCellValueFactory(new PropertyValueFactory<Adherent,String>("prenom"));
         cln_addresse.setCellValueFactory(new PropertyValueFactory<Adherent,String>("adresse"));

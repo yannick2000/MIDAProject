@@ -79,7 +79,7 @@ public class LouerController implements Initializable {
             e.printStackTrace();
         }
 
-        /*String sql1 = "select idLivre from livre where idLivre ='"+txt_search_livre.getText()+"' ";
+        String sql1 = "select idLivre from livre where idLivre ='"+txt_search_livre.getText()+"' ";
         int livre = 0;
         try{
             st= cnx.prepareStatement(sql1);
@@ -89,7 +89,7 @@ public class LouerController implements Initializable {
             }
         }catch (Exception e){
             e.printStackTrace();
-        }*/
+        }
         java.util.Date datedd =  Date.from(datedebut.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
         java.sql.Date datedebut = new java.sql.Date(datedd.getTime());
         java.util.Date datedf =  Date.from(datefin.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());

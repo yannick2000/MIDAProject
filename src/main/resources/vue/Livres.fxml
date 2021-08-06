@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
@@ -9,74 +10,100 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="405.0" prefWidth="668.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivreController">
-   <children>
-      <Label layoutX="14.0" layoutY="28.0" prefHeight="17.0" prefWidth="77.0" text="Rechercher">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txt_recherche" layoutX="101.0" layoutY="23.0" promptText="indentifiant">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="txt_nbrpages" layoutX="209.0" layoutY="64.0" prefHeight="30.0" prefWidth="171.0" promptText="Nombre de pages">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="txt_nom" layoutX="12.0" layoutY="64.0" prefHeight="30.0" prefWidth="160.0" promptText="Nom">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextField>
-      <ComboBox fx:id="cb_type" layoutX="14.0" layoutY="162.0" onMouseClicked="#remplirType" prefHeight="27.0" prefWidth="138.0" promptText="Type" />
-      <ComboBox fx:id="cb_genre" layoutX="171.0" layoutY="162.0" onMouseClicked="#remplirGenre" prefHeight="25.0" prefWidth="131.0" promptText="Genre" />
-      <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="288.0" layoutY="26.0" onMouseClicked="#rechercheLivre" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8_search3_32.png" />
-         </image>
-      </ImageView>
-      <TableView fx:id="table_livre" layoutX="25.0" layoutY="208.0" onMouseClicked="#tableLivreevent" prefHeight="153.0" prefWidth="619.0" stylesheets="@../sample/main.css" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="24.0">
-        <columns>
-          <TableColumn fx:id="cln_id" prefWidth="51.0" text="id" />
-          <TableColumn fx:id="cln_nom" prefWidth="100.0" text="nom" />
-            <TableColumn fx:id="cln_auteur" prefWidth="109.0" text="Auteur" />
-            <TableColumn fx:id="cln_maisonedition" prefWidth="127.0" text="Maison d'edition" />
-            <TableColumn fx:id="cln_type" prefWidth="231.0" text="Type" />
-        </columns>
-      </TableView>
-      <Label fx:id="lab__url" layoutX="501.0" layoutY="166.0" prefHeight="20.0" prefWidth="171.0" text="Aucune donnee selectionnee" />
-      <ImageView fx:id="image_livre" fitHeight="124.0" fitWidth="179.0" layoutX="461.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btn_ajouter" layoutX="75.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#ajouterLivre" prefHeight="38.0" prefWidth="131.0" styleClass="buttons" text="Ajouter" />
-      <Button fx:id="btn_supprimer" layoutX="477.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#supprimerLivre" prefHeight="38.0" prefWidth="131.0" styleClass="buttons" text="Supprimer" />
-      <Button fx:id="btn_modifier" layoutX="295.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#mofifierLivre" prefHeight="38.0" prefWidth="123.0" styleClass="buttons" text="Modifier" />
-      <DatePicker fx:id="datepicker" layoutX="315.0" layoutY="163.0" prefHeight="20.0" prefWidth="131.0" promptText="Date de parution" />
-      <TextField fx:id="txt_auteur" layoutX="11.0" layoutY="111.0" prefHeight="26.0" prefWidth="160.0" promptText="Auteur" />
-      <TextField fx:id="txt_maisonedition" layoutX="212.0" layoutY="111.0" prefHeight="26.0" prefWidth="171.0" promptText="Maison d'edition" />
-      <ImageView fx:id="icon_importer" fitHeight="25.0" fitWidth="25.0" layoutX="465.0" layoutY="163.0" onMouseClicked="#importerImage" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8_add_file_32.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="89.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8_save2_32.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="301.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8_edit2_32.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="488.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/icons8_delete2_32.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="503.0" prefWidth="1143.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivreController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="79.0" prefHeight="36.0" prefWidth="120.0" text="Rechercher">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_recherche" layoutX="156.0" layoutY="68.0" prefHeight="38.0" prefWidth="180.0" promptText="indentifiant" styleClass="tf-box">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_nbrpages" layoutX="243.0" layoutY="136.0" prefHeight="38.0" prefWidth="197.0" promptText="Nombre de pages" styleClass="tf-box">
+               <font>
+                  <Font name="Book Antiqua" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_nom" layoutX="13.0" layoutY="134.0" prefHeight="42.0" prefWidth="178.0" promptText="Nom" styleClass="tf-box">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cb_type" layoutX="699.0" layoutY="200.0" onMouseClicked="#remplirType" prefHeight="41.0" prefWidth="168.0" promptText="Type" />
+            <ComboBox fx:id="cb_genre" layoutX="502.0" layoutY="202.0" onMouseClicked="#remplirGenre" prefHeight="41.0" prefWidth="171.0" promptText="Genre" />
+            <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="372.0" layoutY="82.0" onMouseClicked="#rechercheLivre" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_search3_32.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table_livre" layoutX="64.0" layoutY="263.0" onMouseClicked="#tableLivreevent" prefHeight="162.0" prefWidth="815.0" stylesheets="@../sample/main.css">
+              <columns>
+                <TableColumn fx:id="cln_id" maxWidth="378.0" prefWidth="79.0" text="id" />
+                <TableColumn fx:id="cln_nom" prefWidth="159.0" text="nom" />
+                  <TableColumn fx:id="cln_auteur" prefWidth="224.0" text="Auteur" />
+                  <TableColumn fx:id="cln_maisonedition" minWidth="0.0" prefWidth="151.0" text="Maison d'edition" />
+                  <TableColumn fx:id="cln_type" prefWidth="205.0" text="Type" />
+              </columns>
+            </TableView>
+            <Label fx:id="lab__url" layoutX="952.0" layoutY="243.0" prefHeight="20.0" prefWidth="171.0" text="Aucune donnee selectionnee" />
+            <ImageView fx:id="image_livre" fitHeight="154.0" fitWidth="219.0" layoutX="898.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btn_ajouter" layoutX="117.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#ajouterLivre" prefHeight="54.0" prefWidth="175.0" styleClass="buttons" text="Ajouter" />
+            <Button fx:id="btn_supprimer" layoutX="925.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#supprimerLivre" prefHeight="56.0" prefWidth="164.0" styleClass="buttons" text="Supprimer">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_modifier" layoutX="531.0" layoutY="431.0" mnemonicParsing="false" onMouseClicked="#mofifierLivre" prefHeight="56.0" prefWidth="168.0" styleClass="buttons" text="Modifier" />
+            <DatePicker fx:id="datepicker" layoutX="502.0" layoutY="126.0" prefHeight="39.0" prefWidth="168.0" promptText="Date de parution" />
+            <TextField fx:id="txt_auteur" layoutX="10.0" layoutY="201.0" prefHeight="43.0" prefWidth="185.0" promptText="Auteur" styleClass="tf-box">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_maisonedition" layoutX="242.0" layoutY="204.0" prefHeight="37.0" prefWidth="198.0" promptText="Maison d'edition" styleClass="tf-box">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="icon_importer" fitHeight="42.0" fitWidth="51.0" layoutX="885.0" layoutY="235.0" onMouseClicked="#importerImage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_add_file_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="46.0" layoutX="123.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_save2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="51.0" layoutX="538.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_edit2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="927.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_delete2_32.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="9.0" layoutY="14.0" prefHeight="58.0" prefWidth="924.0">
+               <children>
+                  <Label layoutX="442.0" layoutY="7.0" prefHeight="62.0" prefWidth="178.0" text="LIVRES">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
