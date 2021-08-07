@@ -12,7 +12,7 @@
 
 <BorderPane prefHeight="516.0" prefWidth="1049.0" style="-fx-background-color: #eef2f3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LouerController">
    <bottom>
-      <AnchorPane prefHeight="520.0" prefWidth="1049.0" stylesheets="@../sample/main.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="526.0" prefWidth="1111.0" stylesheets="@../sample/main.css" BorderPane.alignment="CENTER">
           <children>
               <Label layoutX="18.0" layoutY="87.0" prefHeight="17.0" prefWidth="77.0" text="Livre" textFill="#203a43">
                   <font>

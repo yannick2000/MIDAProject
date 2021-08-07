@@ -47,6 +47,12 @@ public class BDController implements Initializable {
     @FXML
     private Button btn_supprimer;
 
+    @FXML
+    private TextField txt_id;
+
+    @FXML
+    private TextField txt_recherche;
+
     public ObservableList<BD> data = FXCollections.observableArrayList();
     @FXML
     void ajouterbd() {
@@ -80,13 +86,14 @@ public class BDController implements Initializable {
         String titre = txt_titre.getText();
         String dessinateur = txt_dessinateur.getText();
 
-        String sql="update bd set titre=?,dessinateur=? where titre = '"+txt_titre.getText()+"' ";
+        String sql="update bd set titre=?,dessinateur=? where idBD = '"+txt_id.getText()+"' ";
         if (!titre.equals("") && !dessinateur.equals("")  ){
             try {
                 st= cnx.prepareStatement(sql);
                 st.setString(1,titre);
                 st.setString(2,dessinateur);
                 st.execute();
+                txt_id.setText("");
                 txt_titre.setText("");
                 txt_dessinateur.setText("");
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"BD Modifier avec success",ButtonType.OK);
@@ -129,6 +136,7 @@ public class BDController implements Initializable {
             st.setInt(1 ,bd.getId());
             result=st.executeQuery();
             if (result.next()){
+                txt_id.setText(result.getString("idBD"));
                 txt_titre.setText(result.getString("titre"));
                 txt_dessinateur.setText(result.getString("dessinateur"));
             }
@@ -153,6 +161,32 @@ public class BDController implements Initializable {
         cln_titre.setCellValueFactory(new PropertyValueFactory<BD,String>("titre"));
         cln_dessinateur.setCellValueFactory(new PropertyValueFactory<BD,String>("dessinateur"));
         tablebd.setItems(data);
+    }
+
+    @FXML
+    void rechercheBD() {
+
+    }
+
+    @FXML
+    void recherchedynamique() {
+        ObservableList<BD> data = FXCollections.observableArrayList();
+        tablebd.getItems().clear();
+        String sql = "select * from bd where titre like ? ";
+        try {
+            st= cnx.prepareStatement(sql);
+            st.setString(1,"%"+txt_recherche.getText()+"%");
+            result=st.executeQuery();
+            while (result.next()){
+                data.add(new BD(result.getInt("idBD"), result.getString("titre"), result.getString("dessinateur") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        cln_titre.setCellValueFactory(new PropertyValueFactory<BD,String>("titre"));
+        cln_dessinateur.setCellValueFactory(new PropertyValueFactory<BD,String>("dessinateur"));
+        tablebd.setItems(data);
+
     }
 
     @Override

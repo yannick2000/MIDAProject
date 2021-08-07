@@ -6,6 +6,7 @@ module MIDAPROJECT {
     requires mysql.connector.java;
     requires itextpdf;
     requires javafx.swing;
+    requires jasperreports;
     opens sample;
     opens controller;
     opens model;

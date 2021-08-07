@@ -126,7 +126,7 @@ public class LivreController implements Initializable {
             st=cnx.prepareStatement(sql);
             st.setString(1,nom);
             st.setString(2,auteur);
-            st.setString(3,nombrePage);
+            st.setString(3,maisonedition);
             st.setInt(4,type);
             st.setInt(5,genre);
             st.setString(6,nombrePage);
@@ -135,7 +135,7 @@ public class LivreController implements Initializable {
             st.setBinaryStream(8,fs,image.length());
             st.executeUpdate();
             showLivres();
-            lab__url.setText("aucune donnee selectionnee");
+            lab__url.setText("aucun Livre selectionner ");
             txt_nom.setText("");
             txt_nbrpages.setText("");
             txt_maisonedition.setText("");
@@ -206,7 +206,7 @@ public class LivreController implements Initializable {
             st=cnx.prepareStatement(sql);
             st.setString(1,nom);
             st.setString(2,auteur);
-            st.setString(3,nombrePage);
+            st.setString(3,maisonedition);
             st.setInt(4,type);
             st.setInt(5,genre);
             st.setString(6,nombrePage);
@@ -223,7 +223,7 @@ public class LivreController implements Initializable {
             cb_type.setValue("nomType");
             cb_genre.setValue("nomGenre");
             image_livre.setImage(null);
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Logement Modifier ", ButtonType.OK );
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"LIVRE Modifier ", ButtonType.OK );
             alert.showAndWait();
             datepicker.setValue(null);
 
@@ -429,13 +429,21 @@ public class LivreController implements Initializable {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        cln_id.setCellValueFactory(new PropertyValueFactory<Livre,Integer>("idl"));
+        //cln_id.setCellValueFactory(new PropertyValueFactory<Livre,Integer>("idl"));
         cln_nom.setCellValueFactory(new PropertyValueFactory<Livre,String>("noml"));
         cln_auteur.setCellValueFactory(new PropertyValueFactory<Livre,String>("auteurl"));
         cln_maisonedition.setCellValueFactory(new PropertyValueFactory<Livre,String>("maisonl"));
         cln_type.setCellValueFactory(new PropertyValueFactory<Livre,String>("typel"));
         table_livre.setItems(listlivre);
     }
+
+
+    @FXML
+    void recherchedynamique() {
+        ObservableList<Livre> listlivre = FXCollections.observableArrayList();
+
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

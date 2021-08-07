@@ -2,6 +2,7 @@ controller\LivreController.class
 controller\AdherentController.class
 model\Location.class
 controller\BDController.class
+controller\JasperReport.class
 sample\Controller.class
 controller\JournalController.class
 controller\HistoriqueController.class

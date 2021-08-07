@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -15,16 +14,7 @@
    <center>
       <BorderPane>
          <top>
-            <Pane prefHeight="83.0" prefWidth="1108.0" style="-fx-background-color: #243B55;" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="72.0" fitWidth="120.0" layoutX="885.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <Label layoutX="709.0" layoutY="34.0" prefHeight="26.0" prefWidth="129.0" text="Nom d'utilisateur " textFill="WHITE">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
+            <Pane prefHeight="83.0" prefWidth="1108.0" style="-fx-background-color: #243B55;" BorderPane.alignment="CENTER" />
          </top>
          <center>
             <BorderPane fx:id="root" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
@@ -37,14 +27,14 @@
             <VBox />
          </center>
          <top>
-            <Pane prefHeight="107.0" prefWidth="232.0" style="-fx-background-color: #093637;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="123.0" prefWidth="232.0" style="-fx-background-color: #093637;" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="27.0" layoutY="27.0" text="Nom de la Bibliotheque" textAlignment="CENTER" textFill="#fffdfd">
-                     <font>
-                        <Font size="17.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="4.0" layoutY="84.0" prefHeight="4.0" prefWidth="221.0" />
+                  <Separator layoutX="5.0" layoutY="107.0" prefHeight="4.0" prefWidth="221.0" />
+                  <ImageView fitHeight="170.0" fitWidth="195.0" layoutX="31.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo_transparent.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </top>
@@ -56,9 +46,9 @@
                         <Font name="Book Antiqua Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#livres" prefHeight="69.0" prefWidth="189.0" style="-fx-background-color: #203A43;" text="Les Livres" textAlignment="CENTER" textFill="#f2eded" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="109.0">
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#livres" prefHeight="69.0" prefWidth="189.0" style="-fx-background-color: #203A43;" text="Documents" textAlignment="CENTER" textFill="#f2eded" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="109.0">
                      <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
+                        <Font name="Book Antiqua Bold" size="15.0" />
                      </font>
                   </Button>
                   <Button alignment="CENTER" layoutX="15.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#location" prefHeight="66.0" prefWidth="193.0" style="-fx-background-color: #203A43;" text="Location" textFill="#f2eded" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="201.0">
@@ -85,7 +75,7 @@
                         <Image url="@../images/home_page_512px.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="71.0" fitWidth="64.0" layoutX="15.0" layoutY="112.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="52.0" fitWidth="66.0" layoutX="22.0" layoutY="118.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/books_512px.png" />
                      </image>

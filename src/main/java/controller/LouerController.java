@@ -124,7 +124,7 @@ public class LouerController implements Initializable {
             e.printStackTrace();
         }
         if (fin==true || debut==true){
-            Alert alert=new Alert(Alert.AlertType.WARNING, "Ce logement est occupe pendant" +dated+"et "+datef+"", ButtonType.OK);
+            Alert alert=new Alert(Alert.AlertType.WARNING, "Ce adherent a deja louer ce livre durant la periode " +dated+"et "+datef+"", ButtonType.OK);
             alert.showAndWait();
         }else {
             String sql0="insert into location(nomLivre,adherent,dateDebut,dateFin) values(?,?,?,?)";
@@ -146,7 +146,7 @@ public class LouerController implements Initializable {
                 this.datedebut.setValue(null);
                 this.datefin.setValue(null);
                 imageview.setImage(null );
-                Alert alert=new Alert(Alert.AlertType.CONFIRMATION, "Ce logement a ete ajouter avec succes ", ButtonType.OK);
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION, "Cette Location  a ete effectuer  avec succes ", ButtonType.OK);
                 alert.showAndWait();
 
 

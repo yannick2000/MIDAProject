@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="961.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DcumentController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1111.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DcumentController">
    <top>
-      <Pane prefHeight="82.0" prefWidth="862.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="btn_livres" layoutX="65.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#ouvrirlivre" prefHeight="58.0" prefWidth="153.0" styleClass="buttons" text="LIVRES" />
-            <Button fx:id="btn_Bd" layoutX="392.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#ouvrirBD" prefHeight="61.0" prefWidth="182.0" styleClass="buttons" text="BD" />
-            <Button fx:id="btn_journal" layoutX="717.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#ouvrirjournal" prefHeight="64.0" prefWidth="170.0" styleClass="buttons" text="JOURNAUX" />
-         </children>
-      </Pane>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <Pane prefHeight="79.0" prefWidth="961.0" style="-fx-background-color: #243B55;">
+               <children>
+                  <Button fx:id="btn_livres" layoutX="65.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#ouvrirlivre" prefHeight="68.0" prefWidth="199.0" styleClass="buttons" text="LIVRES" />
+                  <Button fx:id="btn_Bd" layoutX="424.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#ouvrirBD" prefHeight="65.0" prefWidth="179.0" styleClass="buttons" text="BD" />
+                  <Button fx:id="btn_journal" layoutX="773.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#ouvrirjournal" prefHeight="69.0" prefWidth="166.0" styleClass="buttons" text="JOURNAUX" />
+                  <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="73.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="436.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/webtoon_512px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="41.0" fitWidth="56.0" layoutX="780.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/us_news_512px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
    </top>
    <center>
       <BorderPane fx:id="root" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />

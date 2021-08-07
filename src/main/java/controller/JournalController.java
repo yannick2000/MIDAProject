@@ -35,6 +35,12 @@ public class JournalController implements Initializable {
     private TableColumn<Journal, Date> cln_dateparution;
 
     @FXML
+    private TextField txt_recherche;
+    @FXML
+    private TextField txt_id;
+
+
+    @FXML
     private Button btnajouter;
 
     @FXML
@@ -79,7 +85,7 @@ public class JournalController implements Initializable {
         String titre = txt_titre.getText();
         String date = String.valueOf(dateparution.getValue());
 
-        String sql="update journal set titre_journal=?,datedeparution=? where titre_journal = '"+txt_titre.getText()+"' ";
+        String sql="update journal set titre_journal=?,datedeparution=? where idJournal = '"+txt_id.getText()+"' ";
         if (!titre.equals("") && !date.equals("")  ){
             try {
                 st= cnx.prepareStatement(sql);
@@ -103,7 +109,7 @@ public class JournalController implements Initializable {
 
     @FXML
     void supprimerjournal() {
-        String sql = "delete from journal where titre_journal = '"+txt_titre.getText() +"' ";
+        String sql = "delete from journal where idJournal = '"+txt_id.getText() +"' ";
         try {
             st=cnx.prepareStatement(sql);
             st.executeUpdate();
@@ -127,6 +133,7 @@ public class JournalController implements Initializable {
             st.setInt(1 ,journal.getId());
             result=st.executeQuery();
             if (result.next()){
+                txt_id.setText(result.getString("idJournal"));
                 txt_titre.setText(result.getString("titre_journal"));
                 Date date = result.getDate("datedeparution");
                 dateparution.setValue(((java.sql.Date) date).toLocalDate());
@@ -154,6 +161,27 @@ public class JournalController implements Initializable {
         cln_dateparution.setCellValueFactory(new PropertyValueFactory<Journal,Date>("dateparution"));
         tablejournaux.setItems(data);
     }
+
+    @FXML
+    void recherchedynamique() {
+        ObservableList<Journal> data = FXCollections.observableArrayList();
+        tablejournaux.getItems().clear();
+        String sql="select * from journal where titre_journal like ? ";
+        try {
+            st= cnx.prepareStatement(sql);
+            st.setString(1,"%"+txt_recherche.getText()+"%");
+            result=st.executeQuery();
+            while (result.next()){
+                data.add(new Journal(result.getInt("idJournal"), result.getString("titre_journal"), result.getDate("datedeparution") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        cln_titre.setCellValueFactory(new PropertyValueFactory<Journal,String>("titre"));
+        cln_dateparution.setCellValueFactory(new PropertyValueFactory<Journal,Date>("dateparution"));
+        tablejournaux.setItems(data);
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

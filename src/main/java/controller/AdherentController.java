@@ -7,12 +7,21 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Adherent;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+
+import java.io.InputStream;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class AdherentController implements Initializable {
@@ -80,6 +89,9 @@ public class AdherentController implements Initializable {
 
     @FXML
     private TextField txt_sexe;
+
+    @FXML
+    private Button imprimer;
 
     public ObservableList<Adherent> data = FXCollections.observableArrayList();
     @FXML
@@ -168,6 +180,33 @@ public class AdherentController implements Initializable {
     }
 
     @FXML
+    void rechercheDynamique() {
+        ObservableList<Adherent> data = FXCollections.observableArrayList();
+        table_Adherent.getItems().clear();
+        String sql = "select * from adherent where nomAdh like ? ";
+        try {
+            st= cnx.prepareStatement(sql);
+            st.setString(1,"%"+txt_recherche.getText()+"%");
+           // st.setString(2,"%"+txt_recherche.getText()+"%");
+            result=st.executeQuery();
+            while (result.next()){
+                data.add(new Adherent(result.getInt("idAdh"), result.getString("nomAdh"), result.getString("prenomAdh"), result.getString("sexeAdh"), result.getString("adresseAdh"),result.getDate("datenaisAdh"), result.getString("nCIN"), result.getString("telephoneAdh") ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        cln_nom.setCellValueFactory(new PropertyValueFactory<Adherent,String>("nom"));
+        cln_prenom.setCellValueFactory(new PropertyValueFactory<Adherent,String>("prenom"));
+        cln_addresse.setCellValueFactory(new PropertyValueFactory<Adherent,String>("adresse"));
+        cln_date.setCellValueFactory(new PropertyValueFactory<Adherent,Date>("datedenaissance"));
+        cln_cin.setCellValueFactory(new PropertyValueFactory<Adherent,String>("nci"));
+        cln_sexe.setCellValueFactory(new PropertyValueFactory<Adherent,String>("sexe"));
+        cln_telephone.setCellValueFactory(new PropertyValueFactory<Adherent,String>("telephone"));
+        table_Adherent.setItems(data);
+
+    }
+
+    @FXML
     void searchAdherent() {
         String sql ="select nomAdh,prenomAdh,sexeAdh,adresseAdh,datenaisAdh,nCIN,telephoneAdh from adherent where nomAdh  = '"+txt_recherche.getText() +"'  ";
         int n=0;
@@ -192,6 +231,24 @@ public class AdherentController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR,"Aucun Adherent trouve avec les identifiants = "+txt_recherche.getText()+"",ButtonType.OK);
            alert.showAndWait();
        }
+    }
+
+    @FXML
+    void print() {
+
+      /*  Map<String,Object> parameters=new HashMap<String, Object>();
+        InputStream input = getClass().getResourceAsStream("/com/dereck/jasper/f1.jrxml");
+        try {
+            JasperDesign jasperDesign = JRXmlLoader.load(input);
+            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, cn);
+                /call jasper engine to display report in jasperviewer window/
+                    JasperViewer.viewReport(jasperPrint, false);
+
+        } catch (JRException e) {
+            e.printStackTrace();
+        }
+    */
     }
 
     @FXML
@@ -262,6 +319,8 @@ public class AdherentController implements Initializable {
         cln_telephone.setCellValueFactory(new PropertyValueFactory<Adherent,String>("telephone"));
         table_Adherent.setItems(data);
     }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

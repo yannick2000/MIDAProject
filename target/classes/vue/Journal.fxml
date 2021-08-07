@@ -12,42 +12,73 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="922.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="1111.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="32.0" layoutY="193.0" text="Titre" textFill="#203a43">
-               <font>
-                  <Font name="Book Antiqua Bold" size="24.0" />
-               </font>
-            </Label>
             <Label layoutX="32.0" layoutY="278.0" text="Date de Parution" textFill="#203a43">
                <font>
                   <Font name="Book Antiqua Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txt_titre" layoutX="235.0" layoutY="196.0" prefHeight="26.0" prefWidth="170.0" styleClass="tf-box" />
-            <TableView fx:id="tablejournaux" layoutX="478.0" layoutY="139.0" onMouseClicked="#tableevent" prefHeight="200.0" prefWidth="378.0">
+            <TextField fx:id="txt_titre" layoutX="251.0" layoutY="208.0" prefHeight="33.0" prefWidth="170.0" styleClass="tf-box" />
+            <TableView fx:id="tablejournaux" layoutX="626.0" layoutY="178.0" onMouseClicked="#tableevent" prefHeight="200.0" prefWidth="422.0">
               <columns>
-                <TableColumn fx:id="cln_titre" prefWidth="179.0" text="Titre" />
-                <TableColumn fx:id="cln_dateparution" prefWidth="198.0" text="Date de Parution" />
+                <TableColumn fx:id="cln_titre" prefWidth="206.0" text="Titre" />
+                <TableColumn fx:id="cln_dateparution" prefWidth="209.0" text="Date de Parution" />
               </columns>
             </TableView>
-            <Button fx:id="btnajouter" layoutX="43.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#ajouterjournal" prefHeight="76.0" prefWidth="186.0" styleClass="buttons" text="AJOUTER" />
-            <Button fx:id="btnmodifier" layoutX="287.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#modifierjournal" prefHeight="60.0" prefWidth="181.0" styleClass="buttons" text="MODIFIER" />
-            <Button fx:id="btnsupprimer" layoutX="528.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#supprimerjournal" prefHeight="58.0" prefWidth="176.0" styleClass="buttons" text="SUPPRIMER" />
-            <DatePicker fx:id="dateparution" layoutX="235.0" layoutY="280.0" styleClass="tf-box" />
-            <Label alignment="CENTER" layoutX="305.0" layoutY="44.0" prefHeight="45.0" prefWidth="258.0" text="JOURNAUX" textFill="#203a43">
+            <Button fx:id="btnajouter" layoutX="43.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#ajouterjournal" prefHeight="62.0" prefWidth="167.0" styleClass="buttons" text="AJOUTER" />
+            <Button fx:id="btnmodifier" layoutX="287.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#modifierjournal" prefHeight="57.0" prefWidth="176.0" styleClass="buttons" text="MODIFIER" />
+            <Button fx:id="btnsupprimer" layoutX="528.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#supprimerjournal" prefHeight="62.0" prefWidth="170.0" styleClass="buttons" text="SUPPRIMER" />
+            <DatePicker fx:id="dateparution" layoutX="246.0" layoutY="272.0" prefHeight="35.0" prefWidth="180.0" styleClass="tf-box" />
+            <Label alignment="CENTER" layoutX="497.0" layoutY="44.0" prefHeight="45.0" prefWidth="258.0" text="JOURNAUX" textFill="#203a43">
                <font>
                   <Font name="Book Antiqua Bold" size="36.0" />
                </font>
             </Label>
-            <ImageView fitHeight="65.0" fitWidth="91.0" layoutX="235.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="65.0" fitWidth="91.0" layoutX="452.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/us_news_512px.png" />
                </image>
             </ImageView>
+            <TextField fx:id="txt_recherche" layoutX="782.0" layoutY="117.0" onKeyReleased="#recherchedynamique" styleClass="tf-box" />
+            <Label layoutX="645.0" layoutY="118.0" prefHeight="25.0" prefWidth="92.0" text="Recherche">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="50.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_save2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="294.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_edit2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="530.0" layoutY="403.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_delete2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="951.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_search3_32.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="32.0" layoutY="148.0" text="ID" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_id" layoutX="251.0" layoutY="147.0" prefHeight="33.0" prefWidth="170.0" styleClass="tf-box" />
+            <Label layoutX="34.0" layoutY="216.0" text="Titre" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </center>

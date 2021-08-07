@@ -10,102 +10,107 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="516.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LouerController">
+<BorderPane prefHeight="516.0" prefWidth="1049.0" style="-fx-background-color: #eef2f3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LouerController">
    <bottom>
-      <AnchorPane prefHeight="520.0" prefWidth="1049.0" stylesheets="@../sample/main.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="526.0" prefWidth="1111.0" stylesheets="@../sample/main.css" BorderPane.alignment="CENTER">
           <children>
-              <Label layoutX="14.0" layoutY="31.0" prefHeight="17.0" prefWidth="77.0" text="Livre">
+              <Label layoutX="18.0" layoutY="87.0" prefHeight="17.0" prefWidth="77.0" text="Livre" textFill="#203a43">
                   <font>
-                      <Font name="Bell MT Bold" size="18.0" />
+                      <Font name="Book Antiqua Bold" size="18.0" />
                   </font>
               </Label>
-              <TextField fx:id="txt_search_livre" layoutX="149.0" layoutY="32.0" prefHeight="30.0" prefWidth="200.0" promptText="indentifiant" styleClass="tf-box">
+              <TextField fx:id="txt_search_livre" layoutX="186.0" layoutY="72.0" prefHeight="30.0" prefWidth="200.0" promptText="indentifiant" styleClass="tf-box">
                   <font>
                       <Font size="14.0" />
                   </font>
               </TextField>
-              <TextField fx:id="txt_searchAdh" layoutX="149.0" layoutY="234.0" prefHeight="30.0" prefWidth="207.0" promptText="nCIN" styleClass="tf-box" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="693.0">
+              <TextField fx:id="txt_searchAdh" layoutX="189.0" layoutY="284.0" prefHeight="30.0" prefWidth="198.0" promptText="nCIN" styleClass="tf-box" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="662.0">
                   <font>
-                      <Font size="14.0" />
+                      <Font name="Book Antiqua Bold" size="18.0" />
                   </font>
               </TextField>
-              <TextField fx:id="txt_nomlivre" layoutX="155.0" layoutY="80.0" prefHeight="30.0" prefWidth="197.0" styleClass="tf-box" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="697.0">
+              <TextField fx:id="txt_nomlivre" layoutX="187.0" layoutY="122.0" prefHeight="30.0" prefWidth="197.0" styleClass="tf-box" AnchorPane.leftAnchor="187.0" AnchorPane.rightAnchor="665.0">
                   <font>
                       <Font size="15.0" />
                   </font>
               </TextField>
-              <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="381.0" layoutY="35.0" onMouseClicked="#searchLivre" pickOnBounds="true" preserveRatio="true">
+              <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="407.0" layoutY="60.0" onMouseClicked="#searchLivre" pickOnBounds="true" preserveRatio="true">
                   <image>
                       <Image url="@../images/icons8_search3_32.png" />
                   </image>
               </ImageView>
-              <TextField fx:id="txt_maisonedition" layoutX="158.0" layoutY="167.0" prefHeight="30.0" prefWidth="196.0" styleClass="tf-box" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="695.0">
+              <TextField fx:id="txt_maisonedition" layoutX="191.0" layoutY="228.0" prefHeight="30.0" prefWidth="191.0" styleClass="tf-box" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="667.0">
                   <font>
                       <Font size="14.0" />
                   </font>
               </TextField>
-              <TextField fx:id="txt_auteur" layoutX="155.0" layoutY="123.0" prefHeight="30.0" prefWidth="200.0" styleClass="tf-box" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="694.0">
+              <TextField fx:id="txt_auteur" layoutX="186.0" layoutY="173.0" prefHeight="30.0" prefWidth="200.0" styleClass="tf-box" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="663.0">
                   <font>
                       <Font size="14.0" />
                   </font>
               </TextField>
-              <TextField fx:id="txt_telephoneadh" layoutX="149.0" layoutY="322.0" prefHeight="30.0" prefWidth="206.0" styleClass="tf-box" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="694.0">
+              <TextField fx:id="txt_telephoneadh" layoutX="186.0" layoutY="395.0" prefHeight="30.0" prefWidth="206.0" styleClass="tf-box" AnchorPane.leftAnchor="186.0" AnchorPane.rightAnchor="657.0">
                   <font>
                       <Font size="14.0" />
                   </font>
               </TextField>
-              <Button layoutX="655.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#addLocation" prefHeight="53.0" prefWidth="198.0" styleClass="buttons" text="Ajouter " />
-            <ImageView fx:id="imageview" fitHeight="242.0" fitWidth="390.0" layoutX="629.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="14.0" layoutY="77.0" text="Nom" textFill="#1d6ea4">
+              <Button layoutX="640.0" layoutY="423.0" mnemonicParsing="false" onMouseClicked="#addLocation" prefHeight="67.0" prefWidth="213.0" styleClass="buttons" text="Ajouter " />
+            <ImageView fx:id="imageview" fitHeight="247.0" fitWidth="346.0" layoutX="612.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="14.0" layoutY="126.0" text="Nom" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="285.0" text="Nom" textFill="#1d6ea4">
+            <Label layoutX="22.0" layoutY="330.0" text="Nom" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="4.0" layoutY="171.0" text="Maison d'edition" textFill="#1d6ea4">
+            <Label layoutX="11.0" layoutY="220.0" text="Maison d'edition" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="125.0" text="Auteur" textFill="#1d6ea4">
+            <Label layoutX="14.0" layoutY="177.0" text="Auteur" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="13.0" layoutY="233.0" prefHeight="25.0" prefWidth="115.0" text="Adherent">
+            <Label layoutX="14.0" layoutY="274.0" prefHeight="25.0" prefWidth="115.0" text="Adherent" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="394.0" layoutY="237.0" onMouseClicked="#searchAdherent" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="420.0" layoutY="282.0" onMouseClicked="#searchAdherent" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/icons8_search3_32.png" />
                </image>
             </ImageView>
-            <TextField fx:id="txt_nomadh" layoutX="149.0" layoutY="273.0" prefHeight="30.0" prefWidth="207.0" styleClass="tf-box">
+            <TextField fx:id="txt_nomadh" layoutX="185.0" layoutY="342.0" prefHeight="30.0" prefWidth="207.0" styleClass="tf-box">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
             <DatePicker fx:id="datedebut" layoutX="432.0" layoutY="357.0" onAction="#periode" prefHeight="36.0" prefWidth="163.0" promptText="Date de debut" styleClass="tf-box" />
             <DatePicker fx:id="datefin" layoutX="655.0" layoutY="356.0" onAction="#periode" prefHeight="39.0" prefWidth="146.0" promptText="Date de fin" styleClass="tf-box" />
-            <Label layoutX="8.0" layoutY="324.0" prefHeight="22.0" prefWidth="120.0" text="Telephone" textFill="#1d6ea4">
+            <Label layoutX="11.0" layoutY="382.0" prefHeight="22.0" prefWidth="120.0" text="Telephone" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="txt_periode" layoutX="854.0" layoutY="356.0" prefHeight="36.0" prefWidth="95.0" promptText="Mois" styleClass="tf-box" />
-            <TextField fx:id="txt_ncin" layoutX="149.0" layoutY="374.0" prefHeight="26.0" prefWidth="209.0" styleClass="tf-box" />
-            <Label layoutX="16.0" layoutY="369.0" prefHeight="25.0" prefWidth="63.0" text="nCIN" textFill="#1d6ea4">
+            <TextField fx:id="txt_ncin" layoutX="186.0" layoutY="456.0" prefHeight="26.0" prefWidth="209.0" styleClass="tf-box" />
+            <Label layoutX="25.0" layoutY="444.0" prefHeight="25.0" prefWidth="63.0" text="nCIN" textFill="#203a43">
                <font>
-                  <Font name="Bell MT Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
             <Label layoutX="966.0" layoutY="365.0" prefHeight="18.0" prefWidth="69.0" text="MOIS" />
+            <Label alignment="CENTER" layoutX="439.0" layoutY="15.0" prefHeight="45.0" prefWidth="262.0" text="LOCATION" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="36.0" />
+               </font>
+            </Label>
           </children>
       </AnchorPane>
    </bottom>

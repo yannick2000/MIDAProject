@@ -69,29 +69,31 @@ public class HistoriqueController implements Initializable {
     void modifierhistorique() {
         String adherent = txt_adherent.getText();
         String livre = txt_livre.getText();
-       // String dated = String.valueOf(dateDebut.getValue());
-        //String datef = String.valueOf(dateFin.getValue());
-        String sql="update location set adherent =?, livre =?,dateDebut=?,dateFin=? where adherent = '"+txt_adherent.getText()+"' ";
-
-        //if (dateFin.getValue() != null && dateDebut.getValue() != null){
+        String dated = String.valueOf(dateDebut.getValue());
+        String datef = String.valueOf(dateFin.getValue());
+        String sql = "update location set  nomlivre =?,dateDebut=?,dateFin=? where idLocation = '" + txt_location.getText() + "' ";
+        if (dateFin.getValue() != null && dateDebut.getValue() != null) {
             try {
-                st= cnx.prepareStatement(sql);
-                st.setString(1,adherent);
-                st.setString(2,livre);
-               // st.setString(3,dated);
-               // st.setString(4,datef);
+                st = cnx.prepareStatement(sql);
+               // st.setString(1, adherent);
+                st.setString(1, livre);
+                st.setString(2,dated);
+                st.setString(3,datef);
                 txt_livre.setText("");
                 txt_adherent.setText("");
-                //dateDebut.setValue(null);
-                //dateFin.setValue(null);
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Adherent Modifier avec success",ButtonType.OK);
+                dateDebut.setValue(null);
+                dateFin.setValue(null);
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Historique  Modifier avec succes", ButtonType.OK);
                 alert.showAndWait();
                 remplirTable();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+        }else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Veuillez remplir tous les champs", ButtonType.OK);
+            alert.showAndWait();
         }
-
+    }
 
     @FXML
     void searchLivre() {
@@ -100,7 +102,7 @@ public class HistoriqueController implements Initializable {
 
     @FXML
     void supprimerhistorique() {
-        String sql = "delete from location where Adherent = '"+txt_adherent.getText() +"' ";
+        String sql = "delete from location where idLocation = '"+txt_location.getText() +"' ";
         try {
             st=cnx.prepareStatement(sql);
             st.executeUpdate();
@@ -121,12 +123,13 @@ public class HistoriqueController implements Initializable {
     void tableEvent() {
         Location location = txt_table.getSelectionModel().getSelectedItem();
 
-       String sql ="select adherent,nomLivre,dateDebut,dateFin from location  where idLocation = ?";
+       String sql ="select idLocation,adherent,nomLivre,dateDebut,dateFin from location  where idLocation = ?";
         try{
             st= cnx.prepareStatement(sql);
             st.setInt(1,location.getId());
             result=st.executeQuery();
             while (result.next()){
+                txt_location.setText(result.getString("idLocation"));
                 txt_adherent.setText(result.getString("adherent"));
                 txt_livre.setText(result.getString("nomLivre"));
                 Date dated = result.getDate("dateDebut");

@@ -8,147 +8,158 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="624.0" prefWidth="1111.0" style="-fx-background-color: #eef2f3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdherentController">
+<BorderPane prefHeight="624.0" prefWidth="1111.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdherentController">
    <center>
-      <BorderPane>
-         <center>
-            <AnchorPane prefHeight="516.0" prefWidth="1049.0" styleClass="tf-box" stylesheets="@../sample/main.css" BorderPane.alignment="CENTER">
-                <children>
-                    <Label layoutX="443.0" layoutY="113.0" prefHeight="22.0" prefWidth="114.0" text="Rechercher" textFill="#203a43">
-                        <font>
-                            <Font name="Book Antiqua Bold" size="18.0" />
-                        </font>
-                    </Label>
-                    <TextField fx:id="txt_recherche" layoutX="607.0" layoutY="103.0" prefHeight="44.0" prefWidth="195.0" styleClass="tf-box">
-                        <font>
-                            <Font name="Book Antiqua Bold" size="18.0" />
-                        </font>
-                    </TextField>
-                    <TextField fx:id="txt_nCIN" alignment="CENTER" layoutX="185.0" layoutY="422.0" prefHeight="43.0" prefWidth="185.0" styleClass="tf-box" AnchorPane.leftAnchor="185.0">
-                        <font>
-                            <Font name="Book Antiqua Bold" size="18.0" />
-                        </font>
-                    </TextField>
-                    <TextField fx:id="txt_nom" alignment="CENTER" layoutX="185.0" layoutY="137.0" prefHeight="40.0" prefWidth="181.0" styleClass="tf-box" AnchorPane.leftAnchor="185.0">
-                        <font>
-                            <Font name="Book Antiqua Bold" size="18.0" />
-                        </font>
-                    </TextField>
-                    <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="835.0" layoutY="114.0" onMouseClicked="#searchAdherent" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                            <Image url="@../images/icons8_search3_32.png" />
-                        </image>
-                    </ImageView>
-                    <TableView fx:id="table_Adherent" layoutX="446.0" layoutY="191.0" onMouseClicked="#tableAdherentEvent" prefHeight="250.0" prefWidth="663.0" stylesheets="@../sample/main.css" AnchorPane.leftAnchor="446.0" AnchorPane.rightAnchor="2.0">
-                        <columns>
-                            <TableColumn fx:id="cln_nom" prefWidth="71.0" text="nom" />
-                            <TableColumn fx:id="cln_prenom" minWidth="0.0" prefWidth="90.0" text="Prenom" />
-                            <TableColumn fx:id="cln_addresse" prefWidth="94.0" text="Adresse" />
-                            <TableColumn fx:id="cln_date" prefWidth="148.0" text="Date de naissance " />
-                        <TableColumn fx:id="cln_cin" minWidth="0.0" prefWidth="90.0" text="nCIN" />
-                        <TableColumn fx:id="cln_sexe" minWidth="0.0" prefWidth="83.0" text="Sexe" />
-                        <TableColumn fx:id="cln_telephone" prefWidth="153.0" text="Telephone" />
-                        </columns>
-                    </TableView>
-                  <TextField fx:id="txt_addresse" alignment="CENTER" layoutX="185.0" layoutY="275.0" prefHeight="41.0" prefWidth="180.0" styleClass="tf-box" AnchorPane.leftAnchor="185.0">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="txt_prenom" alignment="CENTER" layoutX="182.0" layoutY="210.0" prefHeight="39.0" prefWidth="185.0" styleClass="tf-box" AnchorPane.leftAnchor="182.0">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                  <DatePicker fx:id="datepicker" layoutX="186.0" layoutY="350.0" prefHeight="41.0" prefWidth="182.0" styleClass="tf-box" AnchorPane.leftAnchor="186.0" />
-                  <TextField fx:id="txt_telephone" alignment="CENTER" layoutX="182.0" layoutY="559.0" prefHeight="39.0" prefWidth="186.0" styleClass="tf-box" AnchorPane.leftAnchor="182.0">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                  <Button fx:id="btn_add" layoutX="443.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#ajouterAdherent" prefHeight="69.0" prefWidth="183.0" styleClass="buttons" text="Ajouter ">
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="1.0">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.5104166865348816" green="0.75" blue="0.4305555522441864" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.2078431397676468" green="0.41960784792900085" blue="0.13725490868091583" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                     <font>
-                        <Font name="Book Antiqua Bold" size="14.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="btn_delete" layoutX="925.0" layoutY="507.0" mnemonicParsing="false" onMouseClicked="#supprimerAdherent" prefHeight="69.0" prefWidth="172.0" styleClass="buttons" text="Supprimer" />
-                  <Button fx:id="btn_edit" layoutX="685.0" layoutY="506.0" mnemonicParsing="false" onMouseClicked="#modifierAdherent" prefHeight="72.0" prefWidth="186.0" styleClass="buttons" text="Modifier" />
-                  <TextField fx:id="txt_sexe" alignment="CENTER" layoutX="182.0" layoutY="483.0" prefHeight="48.0" prefWidth="186.0" styleClass="tf-box" AnchorPane.leftAnchor="182.0">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </TextField>
-                  <Label layoutX="14.0" layoutY="157.0" prefHeight="18.0" prefWidth="50.0" text="NOM" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="218.0" prefHeight="23.0" prefWidth="87.0" text="PRENOM" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="284.0" prefHeight="23.0" prefWidth="87.0" text="ADRESSE" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="359.0" prefHeight="23.0" prefWidth="204.0" text="DATE DE NAISSANCE" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="420.0" prefHeight="23.0" prefWidth="87.0" text="nCIN" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="495.0" prefHeight="23.0" prefWidth="87.0" text="SEXE" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="12.0" layoutY="564.0" prefHeight="23.0" prefWidth="133.0" text="TELEPHONE" textFill="#203a43">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="420.0" layoutY="33.0" prefHeight="61.0" prefWidth="249.0" text="ADHERENT">
-                     <font>
-                        <Font name="Book Antiqua" size="36.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="59.0" fitWidth="95.0" layoutX="361.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/icons8_user2_32.png" />
-                     </image>
-                  </ImageView>
-                </children>
-            </AnchorPane>
-         </center>
-      </BorderPane>
+      <Pane prefWidth="1111.0" BorderPane.alignment="CENTER">
+         <children>
+              <TextField fx:id="txt_nCIN" alignment="CENTER" layoutX="209.0" layoutY="465.0" prefHeight="43.0" prefWidth="175.0" styleClass="tf-box">
+                  <font>
+                      <Font name="Book Antiqua Bold" size="18.0" />
+                  </font>
+              </TextField>
+              <Label layoutX="505.0" layoutY="112.0" prefHeight="22.0" prefWidth="114.0" text="Rechercher" textFill="#203a43">
+                  <font>
+                      <Font name="Book Antiqua Bold" size="18.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="txt_nom" alignment="CENTER" layoutX="206.0" layoutY="155.0" prefHeight="27.0" prefWidth="174.0" styleClass="tf-box">
+                  <font>
+                      <Font name="Book Antiqua Bold" size="18.0" />
+                  </font>
+              </TextField>
+              <ImageView fitHeight="25.0" fitWidth="41.0" layoutX="885.0" layoutY="123.0" onMouseClicked="#searchAdherent" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../images/icons8_search3_32.png" />
+                  </image>
+              </ImageView>
+              <TableView fx:id="table_Adherent" layoutX="427.0" layoutY="179.0" onMouseClicked="#tableAdherentEvent" prefHeight="245.0" prefWidth="674.0" stylesheets="@../sample/main.css">
+                  <columns>
+                      <TableColumn fx:id="cln_nom" prefWidth="71.0" text="nom" />
+                      <TableColumn fx:id="cln_prenom" minWidth="0.0" prefWidth="91.0" text="Prenom" />
+                      <TableColumn fx:id="cln_addresse" prefWidth="99.0" text="Adresse" />
+                      <TableColumn fx:id="cln_date" prefWidth="110.0" text="Date de naissance " />
+                  <TableColumn fx:id="cln_cin" minWidth="0.0" prefWidth="90.0" text="nCIN" />
+                  <TableColumn fx:id="cln_sexe" minWidth="0.0" text="Sexe" />
+                  <TableColumn fx:id="cln_telephone" prefWidth="131.0" text="Telephone" />
+                  </columns>
+              </TableView>
+            <TextField fx:id="txt_addresse" alignment="CENTER" layoutX="209.0" layoutY="524.0" prefHeight="41.0" prefWidth="179.0" styleClass="tf-box">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_prenom" alignment="CENTER" layoutX="204.0" layoutY="221.0" prefHeight="33.0" prefWidth="178.0" styleClass="tf-box">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </TextField>
+            <DatePicker fx:id="datepicker" layoutX="209.0" layoutY="402.0" prefHeight="41.0" prefWidth="173.0" styleClass="tf-box" />
+            <TextField fx:id="txt_telephone" alignment="CENTER" layoutX="204.0" layoutY="339.0" prefHeight="39.0" prefWidth="178.0" styleClass="tf-box">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btn_add" layoutX="448.0" layoutY="459.0" mnemonicParsing="false" onMouseClicked="#ajouterAdherent" prefHeight="75.0" prefWidth="203.0" styleClass="buttons" text="Ajouter ">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5104166865348816" green="0.75" blue="0.4305555522441864" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.2078431397676468" green="0.41960784792900085" blue="0.13725490868091583" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <font>
+                  <Font name="Book Antiqua Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_delete" layoutX="904.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#supprimerAdherent" prefHeight="74.0" prefWidth="199.0" styleClass="buttons" text="Supprimer" />
+            <Button fx:id="btn_edit" layoutX="687.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#modifierAdherent" prefHeight="72.0" prefWidth="186.0" styleClass="buttons" text="Modifier" />
+            <TextField fx:id="txt_sexe" alignment="CENTER" layoutX="202.0" layoutY="274.0" prefHeight="38.0" prefWidth="180.0" styleClass="tf-box">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="33.0" layoutY="149.0" prefHeight="18.0" prefWidth="50.0" text="NOM" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="214.0" prefHeight="23.0" prefWidth="87.0" text="PRENOM" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="533.0" prefHeight="23.0" prefWidth="87.0" text="ADRESSE" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="418.0" prefHeight="23.0" prefWidth="204.0" text="DATE DE NAISSANCE" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="463.0" prefHeight="23.0" prefWidth="87.0" text="nCIN" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="281.0" prefHeight="23.0" prefWidth="87.0" text="SEXE" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="347.0" prefHeight="23.0" prefWidth="133.0" text="TELEPHONE" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="461.0" layoutY="38.0" prefHeight="61.0" prefWidth="249.0" text="ADHERENT">
+               <font>
+                  <Font name="Book Antiqua Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="59.0" fitWidth="95.0" layoutX="388.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_user2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="64.0" layoutX="467.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_save2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="56.0" layoutX="701.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_edit2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="47.0" fitWidth="56.0" layoutX="934.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_delete2_32.png" />
+               </image>
+            </ImageView>
+              <TextField fx:id="txt_recherche" layoutX="665.0" layoutY="101.0" onKeyReleased="#rechercheDynamique" prefHeight="44.0" prefWidth="195.0" styleClass="tf-box">
+                  <font>
+                      <Font name="Book Antiqua Bold" size="18.0" />
+                  </font>
+              </TextField>
+         </children>
+      </Pane>
    </center>
 </BorderPane>
