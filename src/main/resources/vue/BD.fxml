@@ -5,37 +5,63 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="850.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BDController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="931.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BDController">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="tf-box" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tablebd" layoutX="470.0" layoutY="106.0" onMouseClicked="#tableevent" prefHeight="242.0" prefWidth="355.0">
+            <TableView fx:id="tablebd" layoutX="546.0" layoutY="146.0" onMouseClicked="#tableevent" prefHeight="242.0" prefWidth="369.0">
               <columns>
                 <TableColumn fx:id="cln_titre" prefWidth="179.0" text="Titre" />
-                <TableColumn fx:id="cln_dessinateur" prefWidth="174.0" text="Dessinateur" />
+                <TableColumn fx:id="cln_dessinateur" prefWidth="187.0" text="Dessinateur" />
               </columns>
             </TableView>
-            <Label layoutX="32.0" layoutY="174.0" prefHeight="24.0" prefWidth="57.0" text="TITRE" />
-            <Label layoutX="25.0" layoutY="264.0" text="DESSINATEUR" />
-            <TextField fx:id="txt_titre" layoutX="184.0" layoutY="157.0" prefHeight="29.0" prefWidth="183.0" styleClass="tf-box" />
-            <TextField fx:id="txt_dessinateur" layoutX="180.0" layoutY="256.0" prefHeight="34.0" prefWidth="190.0" styleClass="tf-box" />
-            <Button fx:id="btn_ajouter" layoutX="61.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#ajouterbd" prefHeight="65.0" prefWidth="174.0" styleClass="buttons" text="AJOUTER" />
-            <Button fx:id="btn_modifier" layoutX="319.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#modifierbd" prefHeight="71.0" prefWidth="176.0" styleClass="buttons" text="MODIFIER" />
-            <Button fx:id="btn_supprimer" layoutX="580.0" layoutY="397.0" mnemonicParsing="false" onMouseClicked="#supprimerbd" prefHeight="75.0" prefWidth="176.0" styleClass="buttons" text="SUPPRIMER" />
-            <Pane layoutY="14.0" prefHeight="76.0" prefWidth="756.0">
-               <children>
-                  <Label layoutX="213.0" layoutY="16.0" text="BD">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
+            <Label layoutX="33.0" layoutY="252.0" prefHeight="24.0" prefWidth="57.0" text="TITRE">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="335.0" text="DESSINATEUR">
+               <font>
+                  <Font name="Book Antiqua Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_titre" layoutX="184.0" layoutY="230.0" prefHeight="37.0" prefWidth="196.0" styleClass="tf-box" />
+            <TextField fx:id="txt_dessinateur" layoutX="184.0" layoutY="318.0" prefHeight="34.0" prefWidth="190.0" styleClass="tf-box" />
+            <Button fx:id="btn_ajouter" layoutX="61.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#ajouterbd" prefHeight="65.0" prefWidth="174.0" styleClass="buttons" text="AJOUTER" textAlignment="CENTER" />
+            <Button fx:id="btn_modifier" layoutX="348.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#modifierbd" prefHeight="71.0" prefWidth="176.0" styleClass="buttons" text="MODIFIER" textAlignment="CENTER" />
+            <Button fx:id="btn_supprimer" layoutX="649.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#supprimerbd" prefHeight="75.0" prefWidth="176.0" styleClass="buttons" text="SUPPRIMER" textAlignment="CENTER" />
+            <ImageView fitHeight="50.0" fitWidth="45.0" layoutX="69.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_save2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="57.0" layoutX="356.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_edit2_32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="49.0" layoutX="655.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_delete2_32.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="411.0" layoutY="47.0" prefHeight="68.0" prefWidth="110.0" text="BD" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="66.0" fitWidth="80.0" layoutX="347.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/webtoon_512px.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </center>

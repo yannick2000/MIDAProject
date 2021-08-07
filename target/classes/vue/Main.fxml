@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="410.0" prefWidth="678.0" styleClass="parent" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Pane layoutX="20.0" layoutY="35.0" prefHeight="340.0" prefWidth="637.0" styleClass="pane" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="35.0">
+      <Pane layoutX="20.0" layoutY="35.0" prefHeight="340.0" prefWidth="637.0" style="-fx-background-color: #373B44;" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="35.0">
          <children>
             <Label layoutX="404.0" layoutY="88.0" prefHeight="44.0" prefWidth="187.0" text="Etes vous inscris ?" textAlignment="CENTER" textFill="#eeeaea">
                <font>

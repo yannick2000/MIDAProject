@@ -14,16 +14,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="503.0" prefWidth="1143.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivreController">
+<BorderPane prefHeight="503.0" prefWidth="1143.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivreController">
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0">
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #eef2f3;">
          <children>
-            <Label layoutX="14.0" layoutY="79.0" prefHeight="36.0" prefWidth="120.0" text="Rechercher">
+            <Label layoutX="13.0" layoutY="87.0" prefHeight="44.0" prefWidth="120.0" text="Rechercher" textFill="#203a43">
                <font>
                   <Font name="Book Antiqua Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txt_recherche" layoutX="156.0" layoutY="68.0" prefHeight="38.0" prefWidth="180.0" promptText="indentifiant" styleClass="tf-box">
+            <TextField fx:id="txt_recherche" layoutX="133.0" layoutY="91.0" prefHeight="38.0" prefWidth="180.0" promptText="indentifiant" styleClass="tf-box">
                <font>
                   <Font size="18.0" />
                </font>
@@ -40,7 +40,7 @@
             </TextField>
             <ComboBox fx:id="cb_type" layoutX="699.0" layoutY="200.0" onMouseClicked="#remplirType" prefHeight="41.0" prefWidth="168.0" promptText="Type" />
             <ComboBox fx:id="cb_genre" layoutX="502.0" layoutY="202.0" onMouseClicked="#remplirGenre" prefHeight="41.0" prefWidth="171.0" promptText="Genre" />
-            <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="372.0" layoutY="82.0" onMouseClicked="#rechercheLivre" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="326.0" layoutY="94.0" onMouseClicked="#rechercheLivre" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/icons8_search3_32.png" />
                </image>
@@ -94,15 +94,16 @@
                   <Image url="@../images/icons8_delete2_32.png" />
                </image>
             </ImageView>
-            <Pane layoutX="9.0" layoutY="14.0" prefHeight="58.0" prefWidth="924.0">
-               <children>
-                  <Label layoutX="442.0" layoutY="7.0" prefHeight="62.0" prefWidth="178.0" text="LIVRES">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="40.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
+            <Label layoutX="475.0" layoutY="25.0" prefHeight="62.0" prefWidth="178.0" text="LIVRES" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="40.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="67.0" fitWidth="92.0" layoutX="386.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/open_book_512px.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </center>

@@ -6,45 +6,48 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="858.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="922.0" style="-fx-background-color: #eef2f3;" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JournalController">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="706.0">
-               <children>
-                  <Label alignment="CENTER" layoutX="224.0" layoutY="12.0" prefHeight="45.0" prefWidth="258.0" text="JOURNAUX">
-                     <font>
-                        <Font name="Book Antiqua Bold" size="36.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Label layoutX="32.0" layoutY="193.0" text="Titre">
+            <Label layoutX="32.0" layoutY="193.0" text="Titre" textFill="#203a43">
                <font>
-                  <Font name="Book Antiqua Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="32.0" layoutY="278.0" text="Date de Parution">
+            <Label layoutX="32.0" layoutY="278.0" text="Date de Parution" textFill="#203a43">
                <font>
-                  <Font name="Book Antiqua Bold" size="18.0" />
+                  <Font name="Book Antiqua Bold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="txt_titre" layoutX="211.0" layoutY="192.0" prefHeight="26.0" prefWidth="170.0" styleClass="tf-box" />
+            <TextField fx:id="txt_titre" layoutX="235.0" layoutY="196.0" prefHeight="26.0" prefWidth="170.0" styleClass="tf-box" />
             <TableView fx:id="tablejournaux" layoutX="478.0" layoutY="139.0" onMouseClicked="#tableevent" prefHeight="200.0" prefWidth="378.0">
               <columns>
                 <TableColumn fx:id="cln_titre" prefWidth="179.0" text="Titre" />
-                <TableColumn fx:id="cln_dateparution" prefWidth="195.0" text="Date de Parution" />
+                <TableColumn fx:id="cln_dateparution" prefWidth="198.0" text="Date de Parution" />
               </columns>
             </TableView>
-            <Button fx:id="btnajouter" layoutX="43.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#ajouterjournal" prefHeight="59.0" prefWidth="168.0" styleClass="buttons" text="AJOUTER" />
+            <Button fx:id="btnajouter" layoutX="43.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#ajouterjournal" prefHeight="76.0" prefWidth="186.0" styleClass="buttons" text="AJOUTER" />
             <Button fx:id="btnmodifier" layoutX="287.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#modifierjournal" prefHeight="60.0" prefWidth="181.0" styleClass="buttons" text="MODIFIER" />
             <Button fx:id="btnsupprimer" layoutX="528.0" layoutY="391.0" mnemonicParsing="false" onMouseClicked="#supprimerjournal" prefHeight="58.0" prefWidth="176.0" styleClass="buttons" text="SUPPRIMER" />
-            <DatePicker fx:id="dateparution" layoutX="211.0" layoutY="276.0" styleClass="tf-box" />
+            <DatePicker fx:id="dateparution" layoutX="235.0" layoutY="280.0" styleClass="tf-box" />
+            <Label alignment="CENTER" layoutX="305.0" layoutY="44.0" prefHeight="45.0" prefWidth="258.0" text="JOURNAUX" textFill="#203a43">
+               <font>
+                  <Font name="Book Antiqua Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="65.0" fitWidth="91.0" layoutX="235.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/us_news_512px.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </center>

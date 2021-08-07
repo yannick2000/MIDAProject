@@ -12,7 +12,7 @@
 
 <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="281.0" stylesheets="@../sample/main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="138.0" text="S'inscrire" textFill="#c5304d">
+        <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="138.0" text="S'inscrire" textFill="#203a43">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
@@ -73,7 +73,7 @@
       </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0">
             <children>
-                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" styleClass="pink-btn" stylesheets="@../sample/main.css" text="S'inscrire" />
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: #203a43;" styleClass="pink-btn" stylesheets="@../sample/main.css" text="S'inscrire" />
             </children>
             <padding>
                 <Insets right="20.0" />
