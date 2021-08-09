@@ -235,20 +235,6 @@ public class AdherentController implements Initializable {
 
     @FXML
     void print() {
-
-      /*  Map<String,Object> parameters=new HashMap<String, Object>();
-        InputStream input = getClass().getResourceAsStream("/com/dereck/jasper/f1.jrxml");
-        try {
-            JasperDesign jasperDesign = JRXmlLoader.load(input);
-            JasperReport jasperReport = JasperCompileManager.compileReport(jasperDesign);
-            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, cn);
-                /call jasper engine to display report in jasperviewer window/
-                    JasperViewer.viewReport(jasperPrint, false);
-
-        } catch (JRException e) {
-            e.printStackTrace();
-        }
-    */
     }
 
     @FXML
